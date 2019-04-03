@@ -8,10 +8,21 @@ public class Course {
     public static void main(String[] args) {
         JavaCourse stu1 = new JavaCourse();
         JavaCourse stu2 = new JavaCourse();
+        JavaCourse[] Student={stu1,stu2};
         inStu(stu1);
         inStu(stu2);
         stu1.printAll();
         stu2.printAll();
+        calAvgscore(Student);
+    }
+
+    public static void calAvgscore(JavaCourse[] javaCourses){
+        double avgScore = 0;
+        for (int i=0;i<javaCourses.length;i++){
+            avgScore+=javaCourses[i].getSumScore();
+        }
+        avgScore=avgScore/javaCourses.length;
+        System.out.println("该Java课程的平均成绩是"+avgScore);
     }
 
     public static void inStu(JavaCourse stu) {

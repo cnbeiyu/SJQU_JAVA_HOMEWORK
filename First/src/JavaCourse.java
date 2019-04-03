@@ -13,7 +13,7 @@ class JavaCourse{
     private int testScore;
     private int dailySocre;
     private int finalSocre;
-    private double sumScore=this.testScore*TR + this.dailySocre*RR + finalSocre*ER;
+    private double sumScore;
 
     public void printAll(){
         this.calSumscore();
